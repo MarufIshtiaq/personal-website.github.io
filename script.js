@@ -1,4 +1,4 @@
-/* Floating background sparkles */
+/* Background sparkles */
 const sparkleBox = document.getElementById("sparkles");
 const colors = ["#ff4d6d", "#ffafcc", "#ffd166", "#cdb4db", "#ffb703"];
 
@@ -16,7 +16,7 @@ function createSparkle() {
 
 setInterval(createSparkle, 300);
 
-/* Randomize leaf glow timing */
+/* Random blinking timing for leaves */
 document.querySelectorAll(".leaf").forEach(leaf => {
   leaf.style.animationDelay = Math.random() * 4 + "s";
 });
