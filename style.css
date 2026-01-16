@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #ff7eb3, #ff2e63);
+  overflow: hidden;
+  font-family: 'Atma', cursive;
+}
+
+/* Sparkles container */
+#sparkles span {
+  position: absolute;
+  font-size: 16px;
+  animation: glow 3s infinite ease-in-out;
+}
+
+@keyframes glow {
+  0% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0; transform: scale(0.5); }
+}
+
+/* Layout */
+.container {
+  display: flex;
+  height: 100%;
+  padding: 40px;
+}
+
+/* LEFT TEXT */
+.text-area {
+  width: 55%;
+  color: white;
+  font-size: 20px;
+  line-height: 1.7;
+  animation: fadeInLeft 2s ease;
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* RIGHT TREE */
+.tree-area {
+  width: 45%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.tree {
+  position: relative;
+  animation: grow 2.5s ease-out;
+}
+
+@keyframes grow {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+/* Tree trunk */
+.trunk {
+  width: 40px;
+  height: 200px;
+  background: #5a2d0c;
+  margin: auto;
+  border-radius: 10px;
+}
+
+/* Leaves (hearts) */
+.leaves {
+  position: absolute;
+  bottom: 160px;
+  left: -80px;
+  width: 200px;
+  height: 200px;
+}
