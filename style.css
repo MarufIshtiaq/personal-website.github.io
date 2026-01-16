@@ -6,22 +6,9 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(135deg, #ff7eb3, #ff2e63);
   overflow: hidden;
   font-family: 'Atma', cursive;
-}
-
-/* Sparkles container */
-#sparkles span {
-  position: absolute;
-  font-size: 16px;
-  animation: glow 3s infinite ease-in-out;
-}
-
-@keyframes glow {
-  0% { opacity: 0; transform: scale(0.5); }
-  50% { opacity: 1; transform: scale(1.2); }
-  100% { opacity: 0; transform: scale(0.5); }
+  background: linear-gradient(135deg, #ff7eb3, #ff2e63);
 }
 
 /* Layout */
@@ -31,52 +18,73 @@ body {
   padding: 40px;
 }
 
-/* LEFT TEXT */
+/* Text area */
 .text-area {
   width: 55%;
   color: white;
   font-size: 20px;
   line-height: 1.7;
-  animation: fadeInLeft 2s ease;
+  animation: fadeLeft 2s ease forwards;
 }
 
-@keyframes fadeInLeft {
-  from { opacity: 0; transform: translateX(-50px); }
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-40px); }
   to { opacity: 1; transform: translateX(0); }
 }
 
-/* RIGHT TREE */
+/* Tree area */
 .tree-area {
   width: 45%;
   display: flex;
-  align-items: flex-end;
   justify-content: center;
+  align-items: flex-end;
 }
 
-.tree {
-  position: relative;
-  animation: grow 2.5s ease-out;
+/* Tree animation */
+.tree-svg {
+  width: 100%;
+  max-width: 400px;
+  animation: growTree 2.8s ease-out forwards;
+  transform-origin: bottom;
 }
 
-@keyframes grow {
-  from { transform: scaleY(0); }
-  to { transform: scaleY(1); }
+@keyframes growTree {
+  from { transform: scaleY(0); opacity: 0; }
+  to { transform: scaleY(1); opacity: 1; }
 }
 
-/* Tree trunk */
-.trunk {
-  width: 40px;
-  height: 200px;
-  background: #5a2d0c;
-  margin: auto;
-  border-radius: 10px;
+/* Leaves */
+.leaves text {
+  font-size: 26px;
+  animation: glow 3s infinite ease-in-out;
 }
 
-/* Leaves (hearts) */
-.leaves {
+.leaves text:nth-child(1) { fill: #ff4d6d; }
+.leaves text:nth-child(2) { fill: #ffafcc; }
+.leaves text:nth-child(3) { fill: #ffd166; }
+.leaves text:nth-child(4) { fill: #cdb4db; }
+.leaves text:nth-child(5) { fill: #ff758f; }
+.leaves text:nth-child(6) { fill: #ffb703; }
+.leaves text:nth-child(7) { fill: #ff9aa2; }
+.leaves text:nth-child(8) { fill: #ffc6ff; }
+.leaves text:nth-child(9) { fill: #ffd6a5; }
+.leaves text:nth-child(10){ fill: #f1c0e8; }
+
+@keyframes glow {
+  0%   { opacity: 0.6; transform: scale(0.9); }
+  50%  { opacity: 1; transform: scale(1.15); }
+  100% { opacity: 0.6; transform: scale(0.9); }
+}
+
+/* Sparkles */
+#sparkles span {
   position: absolute;
-  bottom: 160px;
-  left: -80px;
-  width: 200px;
-  height: 200px;
+  font-size: 16px;
+  animation: sparkle 3s infinite ease-in-out;
+}
+
+@keyframes sparkle {
+  0% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1.3); }
+  100% { opacity: 0; transform: scale(0.5); }
 }
