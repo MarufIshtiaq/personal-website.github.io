@@ -1,4 +1,4 @@
-/* Floating heart sparkles */
+/* Floating background sparkles */
 const sparkleBox = document.getElementById("sparkles");
 const colors = ["#ff4d6d", "#ffafcc", "#ffd166", "#cdb4db", "#ffb703"];
 
@@ -11,13 +11,12 @@ function createSparkle() {
   s.style.animationDuration = 2 + Math.random() * 3 + "s";
 
   sparkleBox.appendChild(s);
-
   setTimeout(() => s.remove(), 5000);
 }
 
 setInterval(createSparkle, 300);
 
-/* Random leaf glow delay */
-document.querySelectorAll(".leaves text").forEach(leaf => {
-  leaf.style.animationDelay = Math.random() * 3 + "s";
+/* Randomize leaf glow timing */
+document.querySelectorAll(".leaf").forEach(leaf => {
+  leaf.style.animationDelay = Math.random() * 4 + "s";
 });
