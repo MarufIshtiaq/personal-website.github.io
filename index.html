@@ -7,19 +7,19 @@
   <!-- Bengali handwritten font -->
   <link href="https://fonts.googleapis.com/css2?family=Atma:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Keep private from search -->
+  <!-- Hide from search -->
   <meta name="robots" content="noindex, nofollow">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Background sparkles -->
+  <!-- Sparkles -->
   <div id="sparkles"></div>
 
   <div class="container">
 
-    <!-- LEFT SIDE: TEXT -->
+    <!-- LEFT TEXT -->
     <div class="text-area">
       <p>
         প্রিয় ছোক্ক সোনা,<br>
@@ -39,62 +39,74 @@
       </p>
     </div>
 
-    <!-- RIGHT SIDE: TREE -->
+    <!-- RIGHT TREE -->
     <div class="tree-area">
-      <svg class="tree-svg" viewBox="0 0 500 700">
+      <svg class="tree-svg" viewBox="0 0 600 700">
 
-        <!-- Trunk -->
-        <path d="M250 700 C230 580 260 460 250 360"
-              stroke="#5a2d0c" stroke-width="26"
+        <!-- ================= TRUNK ================= -->
+        <path d="M300 700
+                 C280 600 320 520 300 440
+                 C290 380 310 330 300 280"
+              stroke="#5a2d0c"
+              stroke-width="30"
+              fill="none"
+              stroke-linecap="round"/>
+
+        <!-- ================= MAIN BRANCHES ================= -->
+        <path d="M300 420 C220 380 170 320"
+              stroke="#5a2d0c" stroke-width="18"
               fill="none" stroke-linecap="round"/>
 
-        <!-- Main branches -->
-        <path d="M250 430 C170 380 120 310"
-              stroke="#5a2d0c" stroke-width="16"
+        <path d="M300 410 C380 370 440 310"
+              stroke="#5a2d0c" stroke-width="18"
               fill="none" stroke-linecap="round"/>
 
-        <path d="M250 420 C330 370 390 310"
-              stroke="#5a2d0c" stroke-width="16"
+        <path d="M300 360 C240 340 210 300"
+              stroke="#5a2d0c" stroke-width="14"
               fill="none" stroke-linecap="round"/>
 
-        <path d="M250 360 C190 330 160 280"
-              stroke="#5a2d0c" stroke-width="12"
+        <path d="M300 360 C360 340 390 300"
+              stroke="#5a2d0c" stroke-width="14"
               fill="none" stroke-linecap="round"/>
 
-        <path d="M250 360 C310 330 340 280"
-              stroke="#5a2d0c" stroke-width="12"
+        <!-- ================= SMALL BRANCHES ================= -->
+        <path d="M220 350 C190 330 160 300"
+              stroke="#5a2d0c" stroke-width="10"
               fill="none" stroke-linecap="round"/>
 
-        <!-- Small branches -->
-        <path d="M190 320 C150 300 130 260"
+        <path d="M380 350 C410 330 440 300"
+              stroke="#5a2d0c" stroke-width="10"
+              fill="none" stroke-linecap="round"/>
+
+        <path d="M250 300 C230 270 210 250"
               stroke="#5a2d0c" stroke-width="8"
               fill="none" stroke-linecap="round"/>
 
-        <path d="M310 320 C350 300 370 260"
+        <path d="M350 300 C370 270 390 250"
               stroke="#5a2d0c" stroke-width="8"
               fill="none" stroke-linecap="round"/>
 
-        <!-- HEART LEAVES -->
+        <!-- ================= HEART LEAVES (FULL CANOPY) ================= -->
         <g class="leaves">
-          <!-- cluster 1 -->
-          <path class="leaf" d="M160 260 c-8-12-28-6-28 10 0 20 28 34 28 34s28-14 28-34c0-16-20-22-28-10z"/>
-          <path class="leaf" d="M190 240 c-8-12-28-6-28 10 0 20 28 34 28 34s28-14 28-34c0-16-20-22-28-10z"/>
-          <path class="leaf" d="M220 255 c-8-12-28-6-28 10 0 20 28 34 28 34s28-14 28-34c0-16-20-22-28-10z"/>
+          <!-- LEFT SIDE -->
+          <path class="leaf" d="M170 300 c-10-15-32-6-32 12 0 22 32 38 32 38s32-16 32-38c0-18-22-27-32-12z"/>
+          <path class="leaf" d="M200 280 c-10-15-32-6-32 12 0 22 32 38 32 38s32-16 32-38c0-18-22-27-32-12z"/>
+          <path class="leaf" d="M230 260 c-10-15-32-6-32 12 0 22 32 38 32 38s32-16 32-38c0-18-22-27-32-12z"/>
 
-          <!-- cluster 2 -->
-          <path class="leaf" d="M300 245 c-8-12-28-6-28 10 0 20 28 34 28 34s28-14 28-34c0-16-20-22-28-10z"/>
-          <path class="leaf" d="M330 265 c-8-12-28-6-28 10 0 20 28 34 28 34s28-14 28-34c0-16-20-22-28-10z"/>
-          <path class="leaf" d="M360 250 c-8-12-28-6-28 10 0 20 28 34 28 34s28-14 28-34c0-16-20-22-28-10z"/>
+          <!-- CENTER -->
+          <path class="leaf" d="M300 240 c-10-15-32-6-32 12 0 22 32 38 32 38s32-16 32-38c0-18-22-27-32-12z"/>
+          <path class="leaf" d="M270 260 c-10-15-32-6-32 12 0 22 32 38 32 38s32-16 32-38c0-18-22-27-32-12z"/>
+          <path class="leaf" d="M330 260 c-10-15-32-6-32 12 0 22 32 38 32 38s32-16 32-38c0-18-22-27-32-12z"/>
 
-          <!-- top fill -->
-          <path class="leaf" d="M250 200 c-8-12-28-6-28 10 0 20 28 34 28 34s28-14 28-34c0-16-20-22-28-10z"/>
-          <path class="leaf" d="M220 210 c-8-12-28-6-28 10 0 20 28 34 28 34s28-14 28-34c0-16-20-22-28-10z"/>
-          <path class="leaf" d="M280 210 c-8-12-28-6-28 10 0 20 28 34 28 34s28-14 28-34c0-16-20-22-28-10z"/>
+          <!-- RIGHT SIDE -->
+          <path class="leaf" d="M360 280 c-10-15-32-6-32 12 0 22 32 38 32 38s32-16 32-38c0-18-22-27-32-12z"/>
+          <path class="leaf" d="M390 300 c-10-15-32-6-32 12 0 22 32 38 32 38s32-16 32-38c0-18-22-27-32-12z"/>
+          <path class="leaf" d="M420 280 c-10-15-32-6-32 12 0 22 32 38 32 38s32-16 32-38c0-18-22-27-32-12z"/>
 
-          <!-- more fill -->
-          <path class="leaf" d="M200 280 c-8-12-28-6-28 10 0 20 28 34 28 34s28-14 28-34c0-16-20-22-28-10z"/>
-          <path class="leaf" d="M300 285 c-8-12-28-6-28 10 0 20 28 34 28 34s28-14 28-34c0-16-20-22-28-10z"/>
-          <path class="leaf" d="M250 260 c-8-12-28-6-28 10 0 20 28 34 28 34s28-14 28-34c0-16-20-22-28-10z"/>
+          <!-- TOP FILL -->
+          <path class="leaf" d="M300 200 c-10-15-32-6-32 12 0 22 32 38 32 38s32-16 32-38c0-18-22-27-32-12z"/>
+          <path class="leaf" d="M260 210 c-10-15-32-6-32 12 0 22 32 38 32 38s32-16 32-38c0-18-22-27-32-12z"/>
+          <path class="leaf" d="M340 210 c-10-15-32-6-32 12 0 22 32 38 32 38s32-16 32-38c0-18-22-27-32-12z"/>
         </g>
 
       </svg>
